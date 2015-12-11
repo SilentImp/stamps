@@ -1,5 +1,5 @@
 var Stripe = require('stripe');
-Stripe.initialize('mySecretKey');
+Stripe.initialize('sk_test_Eu2ScEpiurzSeLxekNwCVl5Q');
 
 // Use Parse.Cloud.define to define as many cloud functions as you want.
 // For example:

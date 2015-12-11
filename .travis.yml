@@ -1,0 +1,17 @@
+sudo: false
+language: node_js
+branches:
+  only:
+    - master
+before_script:
+  - 'git config --global user.email "thesilentimp@gmail.com"'
+  - 'git config --global user.name "Anton Nemtsev"'
+  - git remote rm origin
+  - 'git remote add origin https://silentimp:${GH_TOKEN}@github.com/SilentImp/stamps.git'
+script:
+  - webpack
+after_script:
+  - gulp
+env:
+  global:
+    - secure: SINwqMnOGZ3dgeCIJYUbsaz1ZH7qtYi9+hjKxBXr2aNvmGhPGY1DaZupwd1pFphFKrQc2FEpdhxkZXR8HbR0XX4npxP+HbkkQgiM4hOFKQvkADcEtn/7VjL8LXH+6LOzG0zuZK8rd6/8Gu1wdmXEh25O+H6gK3o5T9HmSwPLa+A82tW098umbJPJVoldms2hY9aOY0rPbRUgC2IsHMTK/s4sNHKSwV0x768rq5nWCDGK/M5mk51Flwe4GVd/ipQDu6Ihrd3PoUyKaUa9iQgwZTxJ4p6SRVxvSEIuZxqXHBnZoYDan97Dmllby1poVwLRQ8/YduFqnUNuGBKAGsf2I8ZNNyGVwqOnid7/n5kfCsy0hYAFku5Ei17N5JQP9RQerFSUh8+tDpb0roV+b/rYMFMFMhKmoYXhx24p8Bkmb8jljJnnYs5N+cH8MW65ukRBVvXHQFyAuadxtlVmDatsR828PcUdFPvl7j9nSMl0Jh5KpENCh54agtKZqM8+m5IjAikh5ZkGoRLDcu+ePFYoRmvVwDWjAD36sFiJ+XkSzVXHMtQMPybUzCuxgvKcxJprBQeL0Ipff1Boj+Dpne5eYNaH+U2dB9xZa4+cJC6phI56vVnQBc4OJYuNYaFUqqDtZWZMUStslAxNx3Zc2Ta7QehQWTIN0neIBcjtyFKOv80=

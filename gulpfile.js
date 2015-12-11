@@ -6,7 +6,7 @@ gulp.task('copy', function () {
   gulp.src('./source/copy/**/*').pipe(gulp.dest('./build/'));
 });
 
-gulp.task('build', function () {
+gulp.task('build', ['copy'], function () {
   console.log('deploying');
   return gulp.src('build/**')
     .pipe(plumber())
@@ -19,4 +19,4 @@ gulp.task('build', function () {
     }));
 });
 
-gulp.task('default', ['copy', 'build']);
+gulp.task('default', ['build']);
