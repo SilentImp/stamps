@@ -1,0 +1,72 @@
+@import "*.css";
+
+.shop {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  text-align: center;
+  padding: 0 0 0 200px;
+  width: 200px;
+  height: 172px;
+  line-height: 172px;
+  font-size: 0;
+  white-space: nowrap;
+  &__icon {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 200px;
+    height: 172px;
+    background: url(./images/stamp.jpg) 0 50% no-repeat;
+    background-size: 200px auto;
+
+    animation: rotateHue 10s infinite;
+    }
+  &__count {
+    all: unset;
+    width: 100px;
+    height: 75px;
+    line-height: 75px;
+    font-size: 36px;
+    text-align: center;
+    vertical-align: middle;
+    display: inline-block;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    margin: 0 0 0 20px;
+    border-bottom: 1px solid color($black a(15%));
+    }
+  &__times {
+    vertical-align: middle;
+    display: inline-block;
+    font-size: 24px;
+    line-height: 75px;
+    padding: 0 5px;
+    }
+  &__price {
+    vertical-align: middle;
+    display: inline-block;
+    font-size: 24px;
+    line-height: 75px;
+    }
+  &__order {
+    @mixin button;
+    display: block;
+    width: 200px;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    }
+  }
+
+
+@keyframes rotateHue {
+  from {
+    filter: hue-rotate(0deg);
+    }
+  to {
+    filter: hue-rotate(360deg);
+  }
+}

@@ -1,0 +1,23 @@
+@import "*.css";
+
+.admin-navigation {
+  all: unset;
+  display: block;
+  height: 50px;
+  line-height: 50px;
+  @mixin clear;
+
+  &__button {
+    display: inline-block;
+    color: color($black a(75%));
+    margin-left: 20px;
+    &:hover {
+      text-decoration: none;
+      }
+    }
+
+  &__logout {
+    @mixin button;
+    float: right;
+    }
+  }
